@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="logo header__logo">
+        <img class="logo__image" src="../source/img/logo-mobile.svg" width="34" height="38" alt="Иллюстрация рыжего кота">
+          <img class="logo__title" src="../source/img/main-header-logo.svg" width="101" height="18" alt="Кэт Энерджи">
+      </div>
+      <nav class="nav main__nav">
+        <button class="nav__toggle" type="button"><span class="text visually-hidden">Открыть меню</span></button>
+          <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+              <a class="link nav__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="link nav__link" href="#">Каталог продукции</a>
+            </li>
+            <li class="nav__item">
+              <a class="link nav__link" href="#">Подбор программы</a>
+            </li>
+          </ul>
+      </nav>
+    </header>
+    <main class="mainform main">
+      <h1 class="mainform__title">Подбор программы</h1>
+      <div class="questionnaire">
+        <h2 class="questionnaire__title">Заполните анкету, и мы подберем
+          программу питания для вашего кота</h2>
+          <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="pet form__pet">
+              <p>
+                <label class="pet__label" for="pet-name">Имя:*</label>
+                <!--Я помню про эту звездочку-сноску, которая каким-то спец. тегом делается оформлю ее и
+                  саму сноску потом правильно-->
+                <input class="pet__input" type="text" id="pet-name" name="name" placeholder="Барсик">
+              </p>
+              <p>
+                <label class="pet__label" for="pet-weight">Вес (кг):*</label>
+                <input class="pet__input" type="text" id="pet-weight" name="weight" placeholder="7">
+              </p>
+              <p>
+                <label class="pet__label" for="pet-age">Возраст (лет):*</label>
+                <input class="pet__input" type="text" id="pet-age" name="age" placeholder="7">
+              </p>
+            </fieldset>
+            <fieldset class="goal form__goal">
+              <ul class="goal__list">
+                <li class="goal__item">
+                  <input class="goai__input" type="radio" name="radio-goal" id="goal-slim" checked="">
+                  <label class="goal__label" for="goal-slim">Похудение</label>
+                </li>
+                <li class="goal__item">
+                  <input class="goai__input" type="radio" name="radio-goal" id="goal-mass">
+                  <label class="goal__label" for="goal-mass">Набор массы</label>
+                </li>
+                <li class="goal__item">
+                  <input class="goai__input" type="radio" name="radio-goal" id="goal-advice">
+                  <label class="goal__label" for="goal-advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="user form__user">
+              <legend class="user__title">Контактные данные
+                (владельца кота)
+              </legend>
+              <p>
+                <label class="user__label" for="user-email">E-mail:*</label>
+                <input class="user__input" type="text" id="user-email" name="email" placeholder="kuklachev@gmail.com">
+              </p>
+              <p>
+                <label class="user__label" for="user-phone">Телефон:*</label>
+                <input class="user__input" type="text" id="user-phonet" name="phone" placeholder="8 (960) 900-60-90">
+              </p>
+              <legend class="user__title">Комментарий</legend>
+              <p>
+                <input class="user__input user__input--comment" type="text" name="comment" placeholder="Расскажите обо всех повАдках кота">
+              </p>
+            </fieldset>
+            <fieldset class="more form__more">
+              <legend class="user__title"> Дополнительно</legend>
+              <ul class="more__list">
+                <li class="more__item">
+                  <input class="more__input" type="checkbox" id="sugarfree" name="sugarfree" checked="">
+                  <label class="more__label" for="sugarfree">Сахарозаменитель</label>
+                </li>
+                <li class="more__item">
+                  <input class="more__input" type="checkbox" id="water" name="water">
+                  <label class="more__label" for="water">Питьевая вода</label>
+                </li>
+                <li class="more__item">
+                  <input class="more__input" type="checkbox" id="milk" name="milk">
+                  <label class="more__label"  for="milk">Молоко</label>
+                </li>
+                <li class="more__item">
+                  <input class="more__input" type="checkbox" id="vitamins" name="vitamins">
+                  <label class="more__label"  for="vitamins">Витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit" class="questionnaire__button button">Отправить заявку</button>
+            <p>* - Обязательные поля</p>
+          </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="location">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002815!2d30.320858715677197!3d59.93871916905466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616936039422!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="contacts location__contacts">
+          <p class="contacts__title">приглашаем
+            к сотрудничеству дилеров!</p>
+          <p class="contacts__address">ул. Большая
+            Конюшенная, д. 19/8
+            Санкт-Петербург</p>
+        </div>
+      </div>
+        <div class="logo footer__logo">
+          <img class="logo__title" src="../source/img/main-header-logo.svg" width="101" height="18" alt="Кэт Энерджи">
+        </div>
+        <div class="social footer__social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="link" href="#" aria-label="VK"></a>
+            </li>
+            <li class="social__item">
+              <a class="link" href="#" aria-label="Facebook"></a>
+            </li>
+            <li class="social__item">
+              <a class="link" href="#" aria-label="Instagram"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright footer__copyright">
+          <p class="copyright__title">HTML Aacademy</p>
+          <img class="copyright__logo" src="../source/img/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy ">
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
