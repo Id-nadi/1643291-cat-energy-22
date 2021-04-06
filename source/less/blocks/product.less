@@ -1,0 +1,18 @@
+.product__text {
+  font-family: "Arial", sans-serif;
+  color: @basic-text;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+
+  &--eco::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("img/icon_leaf.png") @basic-green center no-repeat;
+    //не понимаю, в чем тут загадка, он не пускает меня в папку с изображениями
+  }
+}
+//Это я тут попробовала реализовать возможности Лесс, получилось! Дальше уже буду думать как это все красиво ровнять))
