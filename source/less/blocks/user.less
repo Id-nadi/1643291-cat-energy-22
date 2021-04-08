@@ -1,0 +1,42 @@
+.user {
+  border: none;
+}
+
+.user__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: @basic-black;
+}
+
+.user__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @dark-grey-radio-form;
+}
+
+.user__input {
+  border: 1px solid @border-dark-grey;
+  width: 219px;
+  height: 45px;
+
+  &[placeholder] {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: @basic-text;
+    padding-left: 15px;
+  }
+}
+
+.user__input--comment {
+  width: 280px;
+  height: 151px;
+
+  &[placeholder] {
+    text-transform: uppercase;
+    text-align: start;
+    //Что я не учла, почему плейсхолдер посередине не смотря ни на что??
+  }
+}
