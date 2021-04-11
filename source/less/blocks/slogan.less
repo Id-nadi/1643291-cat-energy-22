@@ -1,6 +1,11 @@
 .slogan {
   width: 100%;
   padding: 0 20px;
+  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 67%, rgb(255,255,255) 33%);
+
+  @media (min-width: 768px) {
+    background: @basic-white;
+  }
 }
 
 .slogan__wrapper {
@@ -14,6 +19,9 @@
   font-size: 36px;
   line-height: 36px;
   color: @basic-white;
+  text-align: center;
+  padding-top: 27px;
+  margin: 0;
 }
 
 .slogan__text {
