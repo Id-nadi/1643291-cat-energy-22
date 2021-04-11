@@ -5,16 +5,12 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="body"> <!--Я думаю тут задать в стилях центровку всей страничке. Можно так?
-  Тут только карта на всю ширину тянется...или каждый элемент центровать?-->
+  <body class=" body__main body">
     <header class="header">
       <div class="header__wrapper">
-        <div class="logo header__logo">
           <img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="Иллюстрация рыжего кота">
             <img class="logo__title" src="img/main-header-logo.svg" width="101" height="18" alt="Кэт Энерджи">
-        </div>
-        <nav class="nav main__nav">
-          <button class="nav__toggle" type="button"><span class="text visually-hidden">Открыть меню</span></button>
+        <nav class="nav main__nav visually-hidden">
             <ul class="nav__list">
               <li class="nav__item nav__item--active">
                 <a class="link nav__link">Главная</a>
@@ -27,6 +23,7 @@
               </li>
             </ul>
         </nav>
+        <button class="nav__toggle" type="button"><span class="text visually-hidden">Открыть меню</span></button>
       </div>
     </header>
     <main class="main">
@@ -34,29 +31,24 @@
         <div class="slogan__wrapper">
           <h1 class="slogan__title">Функциональное питание для котов</h1>
           <p class="slogan__text">Занялся собой? Займись котом!</p>
+          <img class="can slogan__can" src="img/index-can.svg" alt="Баночка функционального питания Кэт Энерджи">
+          <button class="button slogan__button">
+            <a class="link slogan__link" href="form.html">Подобрать программу</a>
+          </button>
         </div>
-        <img class="can slogan__can" src="img/index-can.svg" width="280" height="270" alt="Баночка функционального питания Кэт Энерджи">
-        <button class="button slogan__button">
-          <a class="link slogan__link" href="form.html">Подобрать программу</a>
-        </button>
       </section>
-          <div class="catalogs">
-            <div class="catalogs__wrapper">
-            <!--Тут кстати забыла спросить, вот эти иконки здесь и дальше с котами и прочими рисунками к абзацам
-            я планировала это делать псевдоэлементом. Или лучше-таки скачать изображения? Но мне не кажутся
-            они контентными-->
-            <h3 class="catalogs__title">Похудение</h3>
-            <p class="catalogs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="link catalogs__link" href="catalog-slim.html">Каталог Slim</a>
-            </div>
-          </div>
-          <div class="catalogs">
-            <div class="catalogs__wrapper">
-              <h3 class="catalogs__title">Набор массы</h3>
-              <p class="catalogs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="link catalogs__link" href="catalog-mass.html">Каталог Pro</a>
-            </div>
-          </div>
+      <div class="catalogs">
+        <div class="catalogs__wrapper">
+          <h3 class="catalogs__title">Похудение</h3>
+          <p class="catalogs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="link catalogs__link" href="catalog-slim.html">Каталог Slim</a>
+        </div>
+        <div class="catalogs__wrapper">
+          <h3 class="catalogs__title">Набор массы</h3>
+          <p class="catalogs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="link catalogs__link" href="catalog-mass.html">Каталог Pro</a>
+        </div>
+      </div>
       <section class="features">
         <div class="product features__product">
           <h2 class="features__title">Как это работает</h2>

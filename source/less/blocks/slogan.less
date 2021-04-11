@@ -1,5 +1,12 @@
 .slogan {
-  background: url("img/index-background-cat.jpg") no-repeat;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.slogan__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slogan__title {
@@ -19,7 +26,6 @@
 
 .slogan__link {
   font-family: "Oswald", sans-serif;
-  //Почему-то здесь пришлось указывать фонт-фэмили, потому что не унаследовался шрифт от боди
   color: @basic-white;
   text-transform: uppercase;
 }
