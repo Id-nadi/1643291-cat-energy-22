@@ -1,10 +1,15 @@
 .slogan {
   width: 100%;
   padding: 0 20px;
-  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 67%, rgb(255,255,255) 33%);
+  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 63%, rgb(255,255,255) 37%);
+  margin-bottom: 20px;
 
   @media (min-width: 768px) {
     background: @basic-white;
+  }
+
+  @media (min-width: 1300px) {
+    background: linear-gradient(to right, rgb(255,255,255) 50%, rgba(104, 183, 56, 0.85) 50%);
   }
 }
 
@@ -22,6 +27,16 @@
   text-align: center;
   padding-top: 27px;
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-right: auto;
+    padding-left: 100px;
+    text-align: start;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+  }
 }
 
 .slogan__text {

@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="body">
+  <body class="body__main body">
     <header class="header">
       <div class="header__wrapper container">
           <img src="img/logo-mobile.svg" width="174" height="52" alt="Логотип Кэт Энерджи">
@@ -28,10 +29,11 @@
           </div>
         </nav>
     </header>
-    <main class="body__main main">
+    <main class="body__main--mobile main">
       <section class="slogan">
         <div class="slogan__wrapper">
-          <h1 class="slogan__title">Функциональное питание для котов</h1>
+          <h1 class="slogan__title">Функциональное <br>
+             питание для котов</h1>
           <p class="slogan__text">Занялся собой? Займись котом!</p>
           <img class="can slogan__can" src="img/index-can.svg" alt="Баночка функционального питания Кэт Энерджи">
           <button class="button slogan__button">
@@ -39,14 +41,14 @@
           </button>
         </div>
       </section>
-      <div class="catalogs">
+      <div class="catalogs container">
         <div class="catalogs__wrapper">
-          <h3 class="catalogs__title">Похудение</h3>
+          <h3 class="catalogs__title catalogs__title--slim">Похудение</h3>
           <p class="catalogs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="link catalogs__link" href="catalog-slim.html">Каталог Slim</a>
         </div>
         <div class="catalogs__wrapper">
-          <h3 class="catalogs__title">Набор массы</h3>
+          <h3 class="catalogs__title catalogs__title--mass">Набор массы</h3>
           <p class="catalogs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="link catalogs__link" href="catalog-mass.html">Каталог Pro</a>
         </div>
