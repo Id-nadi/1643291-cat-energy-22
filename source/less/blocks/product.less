@@ -6,13 +6,56 @@
   line-height: 18px;
   position: relative;
 
-  &--eco::before {
+  &::before {
     position: absolute;
     content: "";
+    left: -80px;
     width: 60px;
     height: 60px;
-    background: url("img/icon_leaf.png") @basic-green center no-repeat;
-    //не понимаю, в чем тут загадка, он не пускает меня в папку с изображениями
+    background: @basic-green center no-repeat;
   }
 }
-//Это я тут попробовала реализовать возможности Лесс, получилось! Дальше уже буду думать как это все красиво ровнять))
+
+.product__list {
+  padding-left: 80px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.product__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 230px;
+    height: 280px;
+  }
+}
+
+.product__item--eco {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -70px;
+    width: 30px;
+    height: 32px;
+    background-image: url("../img/icon_leaf.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    &::before{
+      position: absolute;
+      content: "";
+      right: 0;
+      width: 112px;
+      height: 280px;
+      background: url("../img/index-tablet-product-one.png") no-repeat;
+    }
+  }
+}

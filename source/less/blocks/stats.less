@@ -1,6 +1,48 @@
+.stats {
+  text-align: center;
+}
+
+.stats__numbers {
+  font-weight: 400;
+  font-size: 24px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -25px;
+    height: 56px;
+    width: 124px;
+    background-image: url("../img/index-weight-bracket.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
 .stats__text {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   color: @basic-text;
+}
+
+.stats__expenses {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    width: 174px;
+    text-align: end;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-black;
+  }
 }
