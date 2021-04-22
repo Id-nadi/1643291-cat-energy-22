@@ -1,17 +1,8 @@
 .slogan {
   width: 100%;
   padding: 0 20px;
-  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 63%, rgb(255,255,255) 37%);
   margin-bottom: 20px;
-
-  @media (min-width: @tablet-width) {
-    background: @basic-white;
   }
-
-  @media (min-width: @desktop-width) {
-    background: linear-gradient(to right, rgb(255,255,255) 50%, rgba(104, 183, 56, 0.85) 50%);
-  }
-}
 .slogan__wrapper {
   display: flex;
   flex-direction: column;
@@ -55,7 +46,7 @@
     left: -35px;
     width: 280px;
     height: 270px;
-    background-image: url("../img/index-can.svg");
+    // background-image: url("../img/index-can.svg");
   }
 
   @media (min-width: @tablet-width) {
@@ -65,7 +56,8 @@
       top: 45px;
       width: 709px;
       height: 609px;
-      background: url("../img/index-can.svg") no-repeat;
+      background: url("../img/index-can.png") no-repeat;
+      z-index: -1;
     }
 
     color: @basic-black;

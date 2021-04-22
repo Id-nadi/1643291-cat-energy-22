@@ -1,5 +1,6 @@
 .nav {
   display: none;
+  justify-content: center;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -10,62 +11,25 @@
   }
 }
 
-.nav__toggle {
-  background-color: @basic-white;
-  position: relative;
-}
-
-.nav__toggle--button {
-  position: absolute;
-  content: "";
-  right: 20px;
-  top: 20px;
-  width: 24px;
-  height: 1px;
-  background-color: @basic-black;
-  border: none;
-
-  &::before {
-    border: none;
-    position: absolute;
-    content: "";
-    right: 0px;
-    top: 7px;
-    width: 24px;
-    height: 1px;
-    background-color: @basic-black;
-  }
-
-  &::after {
-    border: none;
-    position: absolute;
-    content: "";
-    right: 0px;
-    top: 14px;
-    width: 24px;
-    height: 1px;
-    background-color: @basic-black;
-}
-
-@media (min-width: @tablet-width) {
-  display: none;
-}
-
-@media (min-width: @desktop-width) {
-  display: none;
-}
-  }
-
 .nav__list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
   margin: 0;
-  padding-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .nav__item {
-  padding-left: 34px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
 }
 
 .nav__link {
@@ -76,13 +40,17 @@
   text-transform: uppercase;
 
   &--active {
-    border-bottom: 2px solid @basic-green;
+    border-bottom: none;
   }
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+
+    &--active {
+      border-bottom: 2px solid @basic-green;
+    }
   }
 
   @media (min-width: @desktop-width) {

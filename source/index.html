@@ -4,15 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
     <header class="header">
       <div class="header__wrapper container">
-          <img src="img/logo-mobile.svg" width="174" height="52" alt="Логотип Кэт Энерджи">
-        <nav >
-          <nav class="nav main__nav">
+        <div class="header__mobile">
+          <img class="header__img" src="img/logo-mobile.svg" width="174" height="52" alt="Логотип Кэт Энерджи">
+          <div class="header__toggle">
+            <button class="header__toggle--button" type="button"><span class="text visually-hidden">Открыть меню</span></button>
+          </div>
+        </div>
+          <nav class="nav header__nav">
             <ul class="nav__list">
               <li class="nav__item">
                 <a class="link nav__link nav__link--active">Главная</a>
@@ -25,9 +28,6 @@
               </li>
             </ul>
           </nav>
-            <div class="nav__toggle">
-              <button class="nav__toggle--button" type="button"><span class="text visually-hidden">Открыть меню</span></button>
-            </div>
           </div>
     </header>
     <main class="main">
