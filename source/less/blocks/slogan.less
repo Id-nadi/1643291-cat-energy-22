@@ -1,5 +1,12 @@
 .slogan {
-  background: url("img/index-background-cat.jpg") no-repeat;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  }
+.slogan__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slogan__title {
@@ -7,19 +14,72 @@
   font-size: 36px;
   line-height: 36px;
   color: @basic-white;
+  text-align: center;
+  padding-top: 27px;
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: auto;
+    padding-left: 100px;
+    text-align: start;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+    margin-bottom: 40px;
+  }
 }
 
 .slogan__text {
   font-weight: 400;
   font-size: 14px;
-  line-height: 14px;
   text-transform: uppercase;
   color: @basic-white;
+  margin-bottom: 310px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 45px;
+    left: -35px;
+    width: 280px;
+    height: 270px;
+    // background-image: url("../img/index-can.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 45px;
+      width: 709px;
+      height: 609px;
+      background: url("../img/index-can.png") no-repeat;
+      z-index: -1;
+    }
+
+    color: @basic-black;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-left: 100px;
+  }
+}
+
+.slogan__button {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 526px;
+    margin-right: auto;
+    padding-left: 100px;
+  }
 }
 
 .slogan__link {
   font-family: "Oswald", sans-serif;
-  //Почему-то здесь пришлось указывать фонт-фэмили, потому что не унаследовался шрифт от боди
   color: @basic-white;
   text-transform: uppercase;
 }

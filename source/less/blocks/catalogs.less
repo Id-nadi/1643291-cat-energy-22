@@ -1,13 +1,97 @@
 .catalogs {
-  background-color: @dark-grey;
+  background-color: @basic-white;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
 }
+}
+
+.catalogs__wrapper {
+  padding: 20px;
+  background-color: @dark-grey;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 374px;
+  }
+  }
 
 .catalogs__title {
   text-transform: uppercase;
   font-weight: 400;
   color: @basic-black;
   font-size: 24px;
-  line-height: 37px;
+  position: relative;
+  padding-left: 60px;
+
+  &::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: @basic-green;
+}
+
+@media (min-width: @tablet-width) {
+  padding-left: 0;
+  font-size: 36px;
+  line-height: 36px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 450px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: @basic-green;
+}
+}
+
+@media (min-width: @desktop-width) {
+  text-align: center;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: @basic-green;
+}
+}
+}
+
+.catalogs__title--slim::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 36px;
+  height: 50px;
+  background-image: url("../img/index-black-cat.png");
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 140px;
+    height: 192px;
+    background-image: url("../img/index-black-cat.png") no-repeat;
+  }
 }
 
 .catalogs__text {
@@ -16,6 +100,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: @basic-black;
+    max-width: 377px;
+  }
 }
 
 .catalogs__link {
@@ -23,4 +114,21 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 120px;
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/arrow.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
+

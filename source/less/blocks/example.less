@@ -1,5 +1,16 @@
 .example {
-  background-color: @dark-grey;
+  background: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(to bottom, @basic-white 60%, @dark-grey 40%);
+  }
+}
+
+.example__wrap {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .example__text {
@@ -7,4 +18,15 @@
   font-size: 14px;
   line-height: 18px;
   color: @basic-text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.example__stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
