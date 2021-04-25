@@ -3,6 +3,32 @@
   font-size: 14px;
   line-height: 18px;
   color: @basic-black;
+  padding-left: 20px;
+  width: 226px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    display: inline-block;
+    width: 323px;
+    padding: 0;
+    margin-left: 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.questionnaire__send {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding-bottom: 72px;
+  }
 }
 
 .questionnaire__button {
@@ -12,6 +38,16 @@
   font-size: 16px;
   line-height: 20px;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 71px;
+    margin-right: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-right: 81px;
+  }
 }
 
 .questionaire__footnote {
@@ -20,4 +56,30 @@
   font-size: 14px;
   line-height: 16px;
   color: @basic-black;
+  text-align: center;
+}
+
+.questionnaire__container {
+  margin: 0;
+  margin-bottom: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 71px;
+    padding-left: 71px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding-right: 110px;
+    padding-left: 110px;
+    margin-bottom: 69px;
+  }
 }

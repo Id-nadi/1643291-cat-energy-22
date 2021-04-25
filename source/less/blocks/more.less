@@ -1,5 +1,6 @@
 .more {
   border: none;
+  padding: 0;
 }
 
 .more__label {
@@ -7,4 +8,48 @@
   font-size: 16px;
   line-height: 18px;
   color: @basic-black;
+  padding-left: 46px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-dark-grey;
+  }
+}
+
+.more__input:checked + label::after {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 6px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/checked-icon.svg");
+}
+
+.more__list {
+  padding-left: 20px;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 71px;
+    padding-right: 71px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.more__item {
+  padding-bottom: 25px;
 }
