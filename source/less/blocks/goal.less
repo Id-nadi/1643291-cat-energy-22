@@ -1,8 +1,24 @@
 .goal {
   border: none;
-  list-style: none;
   padding: 0;
-  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @border-light-grey;
+    list-style: none;
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 27px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin-left: 80px;
+    margin-bottom: 63px;
+    padding: 0;
+    height: 220px;
+    padding-top: 30px;
+  }
 }
 
 .goal__label {
@@ -10,4 +26,60 @@
   font-size: 16px;
   line-height: 18px;
   color: @dark-grey-radio-form;
+  padding-left: 40px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 80px;
+  }
+}
+
+.goal__input + label::before {
+  position: absolute;
+  content: "";
+  top: -4px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid @border-dark-grey;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid @border-dark-grey;
+  }
+}
+
+.goal__input:checked + label::after {
+  position: absolute;
+  content: "";
+  left: 9px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  background-color: @basic-green;
+  border-radius: 50%;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    left: 39px;
+    top: 8px;
+    width: 13px;
+    height: 13px;
+    background-color: @basic-green;
+    border-radius: 50%;
+  }
+}
+
+.goal__item {
+  padding-bottom: 25px;
 }

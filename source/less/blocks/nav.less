@@ -1,5 +1,5 @@
 .nav {
-  display: none;
+  display: flex;
   justify-content: center;
 
   @media (min-width: @tablet-width) {
@@ -65,3 +65,17 @@
   }
 }
 
+.nav__link--form {
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: @form-black;
+  }
+}
+
+.nav__link--active-form {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @basic-green;
+  }
+}
