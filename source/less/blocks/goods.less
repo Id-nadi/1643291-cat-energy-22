@@ -1,6 +1,61 @@
 .goods {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @dark-grey;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 28px;
+    padding-top: 26px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.goods__wrapper {
   border-top: 1px solid @dark-grey;
-  //Не поняла, почему тянется на всю ширину
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    border-top: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-right: 50px;
+   }
+}
+
+.goods__list {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.goods__item {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .goods__title {
@@ -8,12 +63,38 @@
   font-size: 16px;
   line-height: 16px;
   color: @dark-grey-radio-form;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .goods__text {
-  font-family: "Oswald", sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: @basic-text;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    &:first-child {
+      margin-right: 50px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      margin-right: 120px;
+    }
+  }
+}
+
+.goods__button {
+  color:  @basic-white;
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
 }

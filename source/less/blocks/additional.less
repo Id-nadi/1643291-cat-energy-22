@@ -1,20 +1,15 @@
 .additional__wrapper {
-  border-bottom: 2px solid @basic-green;
-  margin-bottom: 36px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
 }
 
-.additional__wrapper--title {
- width: 80%;
- height: 50px;
- padding-top: 35px;
-}
+.additional__wrapper--container {
+  @media (min-width: @tablet-width) {
+    border: 1px solid @medium-dark-grey;
+  }
 
-.additional__title {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  color: @basic-black;
-  margin: 0 auto;
-  padding-left: 20px;
-  background-color: @basic-white;
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
