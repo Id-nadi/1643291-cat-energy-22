@@ -32,7 +32,7 @@
     </header>
     <main class="main">
       <section class="slogan">
-        <div class="slogan__wrapper">
+        <div class="slogan__wrapper container">
           <h1 class="slogan__title">Функциональное <br>
             питание для котов</h1>
           <p class="slogan__text">Занялся собой? Займись котом!</p>
@@ -77,27 +77,34 @@
             </li>
           </ul>
         </div>
+        <h2 class="container features__title">Живой пример</h2>
         <div class="example features__example">
           <div class="example__wrap container">
             <div class="example__story">
-              <h2 class="features__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <div class="example__stats">
-            <div class="stats">
-              <p class="stats__numbers">5 кг</p>
-              <p class="stats__text">снижение <br>
-                веса</p>
+            <ul class="stats stats__list">
+              <li class="stats__item">
+                <div class="stats__wrapper">
+                  <p class="stats__numbers">5 кг</p>
+                  <p class="stats__text">снижение веса</p>
+                </div>
+              </li>
+              <li class="stats__item">
+                <div class="stats__wrapper">
+                  <p class="stats__numbers">60 дней</p>
+                  <p class="stats__text">затрачено времени</p>
+                </div>
+              </li>
+            </ul>
+            <div class="stats__money">
+              <p class="stats__expenses">Затраты на питание:</p>
+              <p class="stats__expenses">15 000 РУБ.</p>
             </div>
-            <div class="stats">
-              <p class="stats__numbers">60 дней</p>
-              <p class="stats__text">затрачено <br>
-                времени</p>
-            </div>
-            <p class="stats__expenses">Затраты на питание: 15 000 РУБ.</p>
             </div>
           </div>
           <div class="example__picture">
-            <img class="visible example__image" src="img/fat-cat.jpg" width="311" height="232" alt="Толстый котейка">
+            <img class="visible example__image" src="img/fat-cat.png" alt="Толстый котейка">
             <img class="visually-hidden example__image" src="img/slim-cat.jpg" width="251" height="240" alt="Стройный котейка">
             <div class="toggle example__toggle">
               <p class="toggle__text">Было</p>
@@ -125,12 +132,12 @@
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa3f5e59171196d6a09e5f6a87906bd356cee5c2ae44c9c1ed2838436ccb70825&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
       </div>
       <div class="footer__wrapper">
-        <div class="container footer__container">
+        <div class="footer__container container">
           <div class="logo footer__logo">
             <img class="logo__title" src="img/main-header-logo.svg" width="101" height="18" alt="Кэт Энерджи">
           </div>
-          <div class="social footer__social container">
-            <ul class="social__list">
+          <div class="social footer__social">
+            <ul class="social__list ">
               <li class="social__item">
                 <a class="link" href="#">
                   <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">

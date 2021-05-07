@@ -1,15 +1,22 @@
 .example {
-  background: @dark-grey;
-
-  @media (min-width: @tablet-width) {
-    background: linear-gradient(to bottom, @basic-white 60%, @dark-grey 40%);
-  }
+  background-color: @light-grey;
 }
 
 .example__wrap {
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    background-color: @light-grey;
+  }
+}
+
+.example__story {
+  @media (min-width: @desktop-width) {
+    width: 50%;
   }
 }
 
@@ -18,10 +25,18 @@
   font-size: 14px;
   line-height: 18px;
   color: @basic-text;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    margin-bottom: 69px;
   }
 }
 
@@ -29,4 +44,29 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: flex-start;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__image {
+  width: 100%;
 }

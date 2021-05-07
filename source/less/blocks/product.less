@@ -5,32 +5,72 @@
   font-weight: 400;
   line-height: 18px;
   position: relative;
+  margin: 0;
+  padding-left: 80px;
 
   &::before {
     position: absolute;
     content: "";
-    left: -80px;
+    left: 0;
     width: 60px;
     height: 60px;
     background: @basic-green center no-repeat;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 90px;
+    padding-left: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background: @basic-green center no-repeat;
+    }
+  }
 }
 
 .product__list {
-  padding-left: 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 26px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    grid-template-columns: 230px 230px;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 77px;
+    counter-reset: section;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
 .product__item {
   @media (min-width: @tablet-width) {
     display: flex;
-    width: 230px;
     height: 280px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      counter-increment: section;
+      content: counters(section, ".") "";
+      font-size: 280px;
+      color: @background-light-grey;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
   }
 }
 
@@ -40,23 +80,11 @@
   &::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: -70px;
+    top: 25px;
+    left: 25px;
     width: 30px;
     height: 32px;
     background-image: url("../img/icon_leaf.svg");
-  }
-
-  @media (min-width: @tablet-width) {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      right: 0;
-      width: 112px;
-      height: 280px;
-      background: url("../img/index-tablet-product-one.png") no-repeat;
-    }
+    background-size: contain;
   }
 }

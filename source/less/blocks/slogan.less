@@ -1,6 +1,5 @@
 .slogan {
   width: 100%;
-  padding: 0 20px;
   margin-bottom: 20px;
 }
 
@@ -8,6 +7,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+  }
 }
 
 .slogan__title {
@@ -21,10 +24,7 @@
   margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
-    margin-right: auto;
-    padding-left: 100px;
     text-align: start;
-    font-weight: 400;
     font-size: 60px;
     line-height: 60px;
     color: @basic-black;
@@ -43,39 +43,54 @@
   &::before {
     position: absolute;
     content: "";
-    top: 45px;
-    left: -35px;
+    top: 50px;
+    left: -50px;
     width: 280px;
     height: 270px;
-    // background-image: url("../img/index-can.svg");
+    background-image: url("../img/index-can.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @tablet-width) {
+    color: @basic-black;
+    font-size: 20px;
+    text-align: start;
+    margin-bottom: 50px;
+
     &::before {
       position: absolute;
       content: "";
       top: 45px;
-      width: 709px;
+      left: 40px;
+      width: 515px;
       height: 609px;
       background: url("../img/index-can.png") no-repeat;
       z-index: -1;
     }
+  }
 
-    color: @basic-black;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: start;
-    margin-right: auto;
-    margin-bottom: 50px;
-    padding-left: 100px;
+  @media (min-width: @desktop-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: -250px;
+      left: 120%;
+      width: 552px;
+      height: 499px;
+      background: url("../img/index-can.png") no-repeat;
+      z-index: -1;
+    }
   }
 }
 
 .slogan__button {
   @media (min-width: @tablet-width) {
     margin-bottom: 526px;
-    margin-right: auto;
-    padding-left: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 281px;
   }
 }
 

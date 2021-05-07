@@ -9,6 +9,8 @@
     width: 100%;
     height: 302px;
     background-image: url("../img/index-cat-mobile.jpg");
+    background-color: @basic-green;
+    background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
   }
@@ -20,16 +22,19 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 126px;
+
     &::before {
       display: block;
       position: absolute;
       content: "";
       top: 0;
       right: 0;
-      width: 720px;
+      width: 50%;
       height: 694px;
       background-image: url("../img/index-cat-desktop.jpg");
       background-repeat: no-repeat;
+      background-size: cover;
       z-index: -1;
     }
   }
@@ -41,13 +46,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-left: 71px;
-    padding-right: 71px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
+    margin-bottom: 70px;
   }
 }
 

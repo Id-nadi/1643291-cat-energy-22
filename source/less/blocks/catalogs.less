@@ -5,9 +5,16 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
 }
 
 .catalogs__wrapper {
+  width: 100%;
   padding: 20px;
   background-color: @dark-grey;
   margin-bottom: 20px;
@@ -16,12 +23,16 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    padding: 57px 53px;
+    padding: 0;
+    width: 100%;
   }
 
   @media (min-width: @desktop-width) {
-    width: 570px;
-    height: 374px;
+    width: 100%;
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 52px;
+    padding-bottom: 59px;
   }
 }
 
@@ -52,8 +63,8 @@
     &::before {
       position: absolute;
       content: "";
-      top: 0;
-      left: 450px;
+      top: 20px;
+      left: 350px;
       width: 200px;
       height: 200px;
       border-radius: 50%;
@@ -80,18 +91,70 @@
 .catalogs__title--slim::after {
   position: absolute;
   content: "";
+  top: -10px;
   left: 0;
   width: 36px;
   height: 50px;
-  background-image: url("../img/index-black-cat.png");
+  background-image: url("../img/slim-cat.svg");
 
   @media (min-width: @tablet-width) {
     position: absolute;
     content: "";
-    left: 0;
+    top: 20px;
+    left: 380px;
     width: 140px;
     height: 192px;
-    background-image: url("../img/index-black-cat.png") no-repeat;
+    background-image: url("../img/slim-cat.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 0;
+    width: 70px;
+    height: 97px;
+    background-image: url("../img/slim-cat.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.catalogs__title--mass::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -10px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/cat-mass.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    top: 90px;
+    left: 300px;
+    width: 250px;
+    height: 112px;
+    background-image: url("../img/cat-mass.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 134px;
+    height: 56px;
+    background-image: url("../img/cat-mass.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -106,7 +169,12 @@
     font-size: 16px;
     line-height: 24px;
     color: @basic-black;
-    max-width: 377px;
+    max-width: 342px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
