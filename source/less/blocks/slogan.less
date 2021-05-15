@@ -28,6 +28,17 @@
     font-size: 60px;
     line-height: 60px;
     color: @basic-black;
+    padding-left: 95px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+    padding-left: 75px;
+    padding-top: 0;
     margin-bottom: 40px;
   }
 }
@@ -37,14 +48,14 @@
   font-size: 14px;
   text-transform: uppercase;
   color: @basic-white;
-  margin-bottom: 310px;
+  margin-bottom: 300px;
   position: relative;
 
   &::before {
     position: absolute;
     content: "";
     top: 50px;
-    left: -50px;
+    left: -55px;
     width: 280px;
     height: 270px;
     background-image: url("../img/index-can.png");
@@ -56,26 +67,29 @@
     color: @basic-black;
     font-size: 20px;
     text-align: start;
+    margin-top: 0;
     margin-bottom: 50px;
+    padding-left: 95px;
 
     &::before {
       position: absolute;
       content: "";
       top: 45px;
-      left: 40px;
-      width: 515px;
-      height: 609px;
+      left: 60px;
+      width: 1000px;
+      height: 1100px;
       background: url("../img/index-can.png") no-repeat;
       z-index: -1;
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding-left: 75px;
     &::before {
       position: absolute;
       content: "";
       top: -250px;
-      left: 120%;
+      left: 124%;
       width: 552px;
       height: 499px;
       background: url("../img/index-can.png") no-repeat;
@@ -87,9 +101,14 @@
 .slogan__button {
   @media (min-width: @tablet-width) {
     margin-bottom: 526px;
+    height: 50px;
+    margin-left: 90px;
+    width: 240px
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-left: 75px;
     margin-bottom: 281px;
   }
 }
@@ -98,4 +117,8 @@
   font-family: "Oswald", sans-serif;
   color: @basic-white;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
